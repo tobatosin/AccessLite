@@ -21,7 +21,8 @@ function App() {
     const fetchedProperties = [
 
       { id: 1, name: "Property 1", price: 100000, description: "Description 1" },
-      { id: 2, name: "Property 2", price: 150000, description: "Description 2" }
+      { id: 2, name: "Property 2", price: 150000, description: "Description 2" },
+      { id: 3, name: "Property 3", price: 200000, description: "Description 3" }
     ];
     setProperties(fetchedProperties);
   }, []);

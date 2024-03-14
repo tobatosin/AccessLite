@@ -113,14 +113,18 @@ function PropertyPage() {
                                 <p className="card-text">Description: {property.description}</p>
                                 <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
                                 <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
-                                <Link to={`/properties/${property.id}`} className="btn btn-primary">View Details</Link>
-                                <button className="btn btn-primary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+                                <div className="btn-group" role="group" aria-label="Property actions">
+                                    <Link to={`/properties/${property.id}`} className="btn btn-primary">View Details</Link>
+                                    <span className="mx-2"></span>
+                                    <button className="btn btn-primary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
         </div>
+
     );
 }
 
