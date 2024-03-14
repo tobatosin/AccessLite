@@ -60,6 +60,9 @@ function Navbar({ saveState }) {
             <Link to="/add" className="nav-item nav-link">
               Add Property
             </Link>
+            <Link to="/Cart" className="nav-item nav-link">
+              Add To Cart
+            </Link>
             <Link to="/my_properties" className="nav-item nav-link">
               My Property
             </Link>
