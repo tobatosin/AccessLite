@@ -57,18 +57,12 @@ function Navbar({ saveState }) {
             <Link to="/properties" className="nav-item nav-link">
               Explore
             </Link>
-            <Link to="/add" className="nav-item nav-link">
-              Add Property
-            </Link>
-            <Link to="/Cart" className="nav-item nav-link">
-              Add To Cart
-            </Link>
+
+
             <Link to="/my_properties" className="nav-item nav-link">
               My Property
             </Link>
-            <Link to="/predict" className="nav-item nav-link">
-              Predict
-            </Link>
+
           </div>
           <Link
             className="btn btn-primary px-3 d-none d-lg-flex"

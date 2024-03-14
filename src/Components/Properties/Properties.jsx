@@ -1,125 +1,155 @@
-import { useState, useEffect } from "react";
 
-function Properties({ state }) {
-  const [Property, setProperty] = useState("");
-  const getData = async () => {
-    const { contract } = state;
-    const AllAvailableProperties = await contract.methods
-      .getAllAvailableProperties()
-      .call();
-    setProperty(AllAvailableProperties);
-    console.log(AllAvailableProperties);
-  };
 
-  const Buy = async(id, value) => {
-    const { contract, web3 } = state;
-    const accounts = await web3.eth.getAccounts();
-    await contract.methods
-          .buyProperty(Number(id))
-          .send({ from: accounts[0], value: value, gas: 480000 });
-  }
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Web3 from "web3";
+import PropertyImage1 from "../../img/property-1.jpg";
+import PropertyImage2 from "../../img/property-2.jpg";
+import PropertyImage3 from "../../img/property-3.jpg";
+
+function Properties() {
+  const [web3, setWeb3] = useState(null);
+  const [properties, setProperties] = useState([]);
+  const [connected, setConnected] = useState(true);
 
   useEffect(() => {
-    getData();
-  }, [state]);
+    async function initWeb3() {
+      try {
+        if (window.ethereum) {
+          const web3 = new Web3(window.ethereum);
+          setWeb3(web3);
+          setConnected(false);
+        } else {
+          console.log("Please install MetaMask or use a dapp browser.");
+        }
+      } catch (error) {
+        console.error("Error initializing Web3:", error);
+      }
+    }
+    initWeb3();
+  }, []);
+
+  useEffect(() => {
+    async function fetchProperties() {
+      // Fetch properties from an API or hardcoded data
+      // For demonstration, let's assume we have hardcoded property data
+      const propertiesData = [
+        {
+          id: 1,
+          name: "Property 1",
+          price: 100000,
+          image: PropertyImage1,
+          returnPerTokenPerYear: 500, // Example return per token in dollars
+          rentalAmount: 2000 // Example rental amount in dollars per month
+        },
+        {
+          id: 2,
+          name: "Property 2",
+          price: 150000,
+          image: PropertyImage2,
+          returnPerTokenPerYear: 600, // Example return per token in dollars
+          rentalAmount: 2500 // Example rental amount in dollars per month
+        },
+        {
+          id: 3,
+          name: "Property 3",
+          price: 200000,
+          image: PropertyImage3,
+          returnPerTokenPerYear: 800, // Example return per token in dollars
+          rentalAmount: 3000 // Example rental amount in dollars per month
+        }
+        // Add more properties as needed
+      ];
+      setProperties(propertiesData);
+    }
+    fetchProperties();
+  }, []);
+
+  async function buyTokens(propertyId) {
+    try {
+      // Check if Web3 is connected
+      if (!connected) {
+        // Prompt the user to connect their wallet using MetaMask
+        if (window.ethereum) {
+          await window.ethereum.enable();
+          setConnected(true);
+        } else {
+          throw new Error("Please install MetaMask or use a dapp browser.");
+        }
+      }
+
+      // Ensure token amount is greater than 0
+      if (tokenAmount <= 0) {
+        throw new Error("Please enter a valid token amount.");
+      }
+
+      // Calculate total cost
+      const totalPrice = tokenAmount * 10; // Assuming each token costs $10
+
+      // Get account address
+      const accounts = await web3.eth.getAccounts();
+      const account = accounts[0];
+
+      // Send transaction to buy tokens
+      const transaction = await token.methods.transfer(account, tokenAmount).send({ from: account, value: totalPrice });
+
+      console.log("Transaction successful:", transaction);
+
+
+    } catch (error) {
+      console.error("Error buying tokens:", error);
+    }
+  }
+
+
   return (
-    <>
-      <div class="container-xxl py-5 property">
-        <div class="container">
-          <div class="row g-0 gx-5 align-items-end">
-            <div class="col-lg-6">
-              <div
-                class="text-start mx-auto mb-5 wow slideInLeft"
-                data-wow-delay="0.1s"
-              >
-                <h1 class="mb-3">Property Listing</h1>
-                <p>
-                  Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut
-                  dolore lorem kasd vero ipsum sit eirmod sit diam justo sed
-                  rebum.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="tab-content">
-            <div id="tab-1" class="tab-pane fade show p-0 active">
-              <div class="row g-4">
-                {Property !== "" &&
-                  Property.map((Property) => {
-                    console.log(Property);
-                    return (
-                      <>
-                        <div
-                          class="col-lg-4 col-md-6 wow fadeInUp"
-                          data-wow-delay="0.1s"
-                          style={{ marginBottom: "24px" }}
-                        >
-                          <div class="property-item rounded overflow-hidden">
-                            <div class="position-relative overflow-hidden">
-                              <a href="">
-                                <img
-                                  class="img-fluid"
-                                  src={Property[1]}
-                                  alt=""
-                                />
-                              </a>
-                              <div class="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
-                                For Sell
-                              </div>
-                              <div class="bg-white rounded-top text-primary position-absolute start-0 bottom-0 mx-4 pt-1 px-3">
-                                Appartment
-                              </div>
-                            </div>
-                            <div class="p-4 pb-0">
-                              <h5 class="text-primary mb-3">
-                                {Property[7]} ETH
-                              </h5>
-                              <a class="d-block h5 mb-2" href="">
-                                {Property[2]}
-                              </a>
-                              <p>
-                                <i class="fa fa-map-marker-alt text-primary me-2"></i>
-                                {Property[3]}
-                              </p>
-                            </div>
-                            <div class="d-flex border-top">
-                              <small class="flex-fill text-center border-end py-2">
-                                <i class="fa fa-ruler-combined text-primary me-2"></i>
-                                {Property[4]} Sqft
-                              </small>
-                              <small class="flex-fill text-center border-end py-2">
-                                <i class="fa fa-bed text-primary me-2"></i>
-                                {Property[5]} Bed
-                              </small>
-                              <small class="flex-fill text-center py-2">
-                                <i class="fa fa-bath text-primary me-2"></i>
-                                {Property[6]} Bath
-                              </small>
-                            </div>
-                            <div
-                              class="col-12 text-center wow fadeInUp"
-                              data-wow-delay="0.1s"
-                            >
-                              <button
-                                class="btn btn-primary py-3 px-5"
-                                style={{ width: "100%" }}
-                                onClick={(e)=>{Buy(Property[0], Property[7])}}
-                              >
-                                <i class="bi bi-cart4"></i> Buy Now
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </>
-                    );
-                  })}
-              </div>
-            </div>
+    <div className="container mt-5">
+      <div class="row g-0 gx-5 align-items-end">
+        <div class="col-lg-6">
+          <div
+            class="text-start mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <h1 class="mb-3">My Property Listing</h1>
+            <p>
+              Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut
+              dolore lorem kasd vero ipsum sit eirmod sit diam justo sed
+              rebum.
+            </p>
           </div>
         </div>
       </div>
-    </>
+      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+        {properties.map(property => (
+          <div key={property.id} className="col mb-4 wow fadeInUp " data-wow-delay="0.5s">
+            <div className="card">
+              <img src={property.image} className="card-img-top" alt={property.name} />
+              <div className="card-body">
+                <h5 className="card-title">{property.name}</h5>
+                <p className="card-text">Price: ${property.price}</p>
+                <p className="card-text">Description: {property.description}</p>
+                <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
+                <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
+                <Link to={`/properties/${property.id}`} className="btn btn-primary">View Details</Link>
+                <span className="mx-2"></span>
+                <button className="btn btn-primary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
   );
 }
 
+
+
+
+
+
+
+
 export default Properties;
+
