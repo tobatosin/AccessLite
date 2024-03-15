@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #00B98E;
+    --primary: #FF6922;
     --secondary: #FF6922;
     --light: #EFFDF5;
     --dark: #0E2E50;
@@ -75,7 +75,9 @@
     transition: .5s;
     z-index: 9999;
 }
-
+.img--secondary{
+    color: #FF6922;
+}
 .nav-bar.sticky-top {
     position: sticky;
     padding: 0;
@@ -111,7 +113,7 @@
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 @media (max-width: 991.98px) {
@@ -242,13 +244,13 @@
 /*** Category ***/
 .cat-item div {
     background: #FFFFFF;
-    border: 1px dashed rgba(0, 185, 142, .3);
+    border: 1px dashed rgb(255,105,34);
     transition: .5s;
 }
 
 .cat-item:hover div {
-    background: var(--primary);
-    border-color: transparent;
+    background: var(--dark);
+    border-color: tra;
 }
 
 .cat-item div * {

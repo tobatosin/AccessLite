@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Properties from "../Properties/Properties";
+import { FaHouseChimneyWindow } from "react-icons/fa6";
 
 function Hero({ state }) {
   const [Property, setProperty] = useState("");
@@ -30,26 +31,25 @@ function Hero({ state }) {
       <div className="container-fluid header bg-white p-0 home">
         <div className="row g-0 align-items-center flex-column-reverse flex-md-row">
           <div className="col-md-6 p-5 mt-lg-5">
-            <h1 className="display-5 animated fadeIn mb-4">
-              Find A <span className="text-primary">Perfect Home</span> To Live
-              With Your Family
+            <h1 className="display-5 animated fadeIn mb-4 mt-5">
+            Welcome to <span className="text-secondary">AccessLite</span> Real Estate Dapp
             </h1>
             <p className="animated fadeIn mb-4 pb-2">
-              Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.
-              Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.
+              Here , We make real estate investment meets innovation. Invest in prime properties through tokenization and become a fractional owner today! <br />
+              Join the future of property investment with <span className="text-secondary">AccessLite</span>. 
             </p>
             <a
               href=""
-              className="btn btn-primary py-3 px-5 me-3 animated fadeIn"
+              className="btn btn-secondary py-3 px-5 me-3 animated fadeIn"
             >
               Get Started
             </a>
           </div>
-          <div className="col-md-6 animated fadeIn">
+          <div className="col-md-6 animated fadeIn ">
             <div className="owl-carousel-item">
               <img
                 className="img-fluid"
-                src="./src/img/carousel-1.jpg"
+                src="./src/img/p17.webp"
                 alt=""
               />
             </div>
@@ -58,7 +58,7 @@ function Hero({ state }) {
       </div>
       {/* Header End */}
 
-      <div class="container-xxl py-5">
+      {/* <div class="container-xxl py-5 bg-white">
         <div class="container type">
           <div
             class="text-center mx-auto mb-5 wow fadeInUp"
@@ -67,27 +67,28 @@ function Hero({ state }) {
           >
             <h1 class="mb-3">Property Types</h1>
             <p>
-              Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut
-              dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed
-              rebum vero dolor duo.
+            Explore our range of property tokens and start building your investment portfolio today. Take a closer look at our exclusive investment offerings and unlock the potential of fractional ownership. 
+            
+
             </p>
           </div>
           <div class="row g-4">
             <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
               <a
-                class="cat-item d-block bg-light text-center rounded p-3"
+                class="cat-item d-block  text-center rounded p-3"
                 href=""
               >
                 <div class="rounded p-4">
                   <div class="icon mb-3">
                     <img
                       class="img-fluid"
-                      src="./src/img/icon-apartment.png"
+                      src="./src/img/orange-icon.jpg"
                       alt="Icon"
                     />
+                    <FaHouseChimneyWindow className="img--secondary"/>
                   </div>
                   <h6>Apartment</h6>
-                  <span>123 Properties</span>
+                  <span className="img--secondary">123 Properties</span>
                 </div>
               </a>
             </div>
@@ -219,14 +220,14 @@ function Hero({ state }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div class="container-xxl py-5 about">
+      <div class="container-xxl py-5 about bg-white">
         <div class="container">
           <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                <img class="img-fluid w-100" src="./src/img/about.jpg" />
+                <img class="img-fluid w-100" src="./src/img/Img-Apart-1/p14.webp" />
               </div>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
@@ -237,18 +238,18 @@ function Hero({ state }) {
                 sed stet lorem sit clita duo justo magna dolore erat amet
               </p>
               <p>
-                <i class="fa fa-check text-primary me-3"></i>Tempor erat elitr
+                <i class="fa fa-check text-secondary me-3"></i>Tempor erat elitr
                 rebum at clita
               </p>
               <p>
-                <i class="fa fa-check text-primary me-3"></i>Aliqu diam amet
+                <i class="fa fa-check text-secondary me-3"></i>Aliqu diam amet
                 diam et eos
               </p>
               <p>
-                <i class="fa fa-check text-primary me-3"></i>Clita duo justo
+                <i class="fa fa-check text-secondary me-3"></i>Clita duo justo
                 magna dolore erat amet
               </p>
-              <a class="btn btn-primary py-3 px-5 mt-3" href="">
+              <a class="btn btn-secondary py-3 px-5 mt-3" href="">
                 Read More
               </a>
             </div>

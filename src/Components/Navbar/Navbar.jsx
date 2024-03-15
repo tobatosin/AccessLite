@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ABI from "./ABI.json";
 import Web3 from "web3";
+import { FaHandshake } from "react-icons/fa";
 
 function Navbar({ saveState }) {
   const [connected, setConnected] = useState(true);
@@ -32,14 +33,15 @@ function Navbar({ saveState }) {
           className="navbar-brand d-flex align-items-center text-center"
         >
           <div className="icon p-2 me-2">
-            <img
-              className="img-fluid"
+            {/* <img
+              className="img-fluid img--secondary"
               src="./src/img/icon-deal.png"
               alt="Icon"
               style={{ width: "30px", height: "30px" }}
-            />
+            /> */}
+            <FaHandshake  className="img--secondary"/>
           </div>
-          <h1 className="m-0 text-primary">Makaan</h1>
+          <h1 className="m-0 text-secondary">AccessLite</h1>
         </Link>
         <button
           type="button"
@@ -51,7 +53,7 @@ function Navbar({ saveState }) {
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <div className="navbar-nav ms-auto">
-            <Link to="/" className="nav-item nav-link active">
+            <Link to="/" className="nav-item nav-link active text-secondary">
               Home
             </Link>
             <Link to="/properties" className="nav-item nav-link">
@@ -65,7 +67,7 @@ function Navbar({ saveState }) {
 
           </div>
           <Link
-            className="btn btn-primary px-3 d-none d-lg-flex"
+            className="btn btn-secondary px-3 d-none d-lg-flex"
             onClick={init}
             disabled={!connected}
           >
