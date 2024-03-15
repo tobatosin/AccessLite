@@ -103,7 +103,10 @@ function Properties() {
 
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5 bg-white">
+        <div>
+          
+        </div>
       <div class="row g-0 gx-5 align-items-end">
         <div class="col-lg-6">
           <div
