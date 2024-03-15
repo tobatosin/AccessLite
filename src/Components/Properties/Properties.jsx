@@ -7,7 +7,7 @@ import PropertyImage1 from "../../img/property-1.jpg";
 import PropertyImage2 from "../../img/property-2.jpg";
 import PropertyImage3 from "../../img/property-3.jpg";
 
-function Properties() {
+function PropertyPage() {
   const [web3, setWeb3] = useState(null);
   const [properties, setProperties] = useState([]);
   const [connected, setConnected] = useState(true);
@@ -31,39 +31,45 @@ function Properties() {
 
   useEffect(() => {
     async function fetchProperties() {
-      // Fetch properties from an API or hardcoded data
-      // For demonstration, let's assume we have hardcoded property data
-      const propertiesData = [
-        {
-          id: 1,
-          name: "Property 1",
-          price: 100000,
-          image: PropertyImage1,
-          returnPerTokenPerYear: 500, // Example return per token in dollars
-          rentalAmount: 2000 // Example rental amount in dollars per month
-        },
-        {
-          id: 2,
-          name: "Property 2",
-          price: 150000,
-          image: PropertyImage2,
-          returnPerTokenPerYear: 600, // Example return per token in dollars
-          rentalAmount: 2500 // Example rental amount in dollars per month
-        },
-        {
-          id: 3,
-          name: "Property 3",
-          price: 200000,
-          image: PropertyImage3,
-          returnPerTokenPerYear: 800, // Example return per token in dollars
-          rentalAmount: 3000 // Example rental amount in dollars per month
-        }
-        // Add more properties as needed
-      ];
-      setProperties(propertiesData);
+      try {
+        // Fetch properties from an API or hardcoded data
+        // For demonstration, let's assume we have hardcoded property data
+        const propertiesData = [
+          {
+            id: 1,
+            name: "Property 1",
+            price: 100000,
+            image: PropertyImage1,
+            returnPerTokenPerYear: 500,
+            rentalAmount: 2000
+          },
+          {
+            id: 2,
+            name: "Property 2",
+            price: 150000,
+            image: PropertyImage2,
+            returnPerTokenPerYear: 600,
+            rentalAmount: 2500
+          },
+          {
+            id: 3,
+            name: "Property 3",
+            price: 200000,
+            image: PropertyImage3,
+            returnPerTokenPerYear: 800,
+            rentalAmount: 3000
+          }
+          // Add more properties as needed
+        ];
+        setProperties(propertiesData);
+      } catch (error) {
+        console.error("Error fetching properties:", error);
+      }
     }
+
     fetchProperties();
   }, []);
+
 
   async function buyTokens(propertyId) {
     try {
@@ -107,7 +113,7 @@ function Properties() {
       <div class="row g-0 gx-5 align-items-end">
         <div class="col-lg-6">
           <div
-            class="text-start mx-auto mb-5 wow fadeInUp"
+            class="text-start mx-auto mb-5 wow slideInLeft"
             data-wow-delay="0.1s"
           >
             <h1 class="mb-3">My Property Listing</h1>
@@ -132,7 +138,6 @@ function Properties() {
                 <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
                 <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
                 <Link to={`/properties/${property.id}`} className="btn btn-primary">View Details</Link>
-                <span className="mx-2"></span>
                 <button className="btn btn-primary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
               </div>
             </div>
@@ -151,5 +156,5 @@ function Properties() {
 
 
 
-export default Properties;
+export default PropertyPage;
 

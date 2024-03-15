@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import PropertyImage1 from "../../img/property-1.jpg";
+import PropertyImage1 from "../../img/property-1.jpg"; // Import additional property images here
 import PropertyImage2 from "../../img/property-2.jpg";
 import PropertyImage3 from "../../img/property-3.jpg";
 
@@ -12,19 +12,19 @@ function PropertyDetails({ properties }) {
         return <div>Property not found</div>;
     }
 
-
-    const additionalImages = [PropertyImage2, PropertyImage3];
+    // Additional property images for the slider
+    const additionalImages = [PropertyImage2, PropertyImage3]; // Add more images as needed
 
     return (
         <div className="container mt-5">
             <div className="row">
                 <div className="col-md-12">
-
+                    {/* Main property image */}
                     <img src={property.image} className="img-fluid" style={{ maxHeight: "600px" }} alt={property.name} />
-
+                    {/* Slider for additional images */}
                     <div id="propertyImageSlider" className="carousel slide mt-3" data-bs-ride="carousel">
                         <div className="carousel-inner">
-                            {additionalImages.map((image, index) => (
+                            {property.additionalImages.map((image, index) => (
                                 <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
                                     <img src={image} className="d-block w-100" style={{ maxHeight: "600px" }} alt={`Additional ${index + 1}`} />
                                 </div>
@@ -41,7 +41,7 @@ function PropertyDetails({ properties }) {
                     </div>
                 </div>
                 <div className="">
-
+                    {/* Detailed property information */}
                     <h2>{property.name}</h2>
                     <p>Property ID: {property.id}</p>
                     <p>Price: ${property.price}</p>
