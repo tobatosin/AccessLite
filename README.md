@@ -24,7 +24,7 @@ AccessLite Dapp is a cutting-edge Web 3.0 Real Estate application developed with
 
 ## How to Use
 
-1. **Installation:** Clone the AccessLite repository from [GitHub](https://github.com/AccessLite) and follow the installation instructions in the README file.
+1. **Installation:** Clone the AccessLite repository from [GitHub](https://github.com/tobatosin/AccessLite.git) and follow the installation instructions in the README file.
 
 2. **Getting Started:** Once installed, navigate to the AccessLite Dapp and create an account or log in if you already have one.
 
