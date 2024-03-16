@@ -440,3 +440,56 @@
     padding-right: 0;
     border-right: none;
 }
+
+/* GotoTopButton Styling */
+.go-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #FF6922;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1000;
+}
+
+.go-to-top-button.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.go-to-top-button:hover {
+  background-color: #0E2E50;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+.go-to-top-button {
+  animation: fadeIn 0.3s ease forwards;
+}
