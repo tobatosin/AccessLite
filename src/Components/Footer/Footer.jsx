@@ -10,12 +10,9 @@ function Footer() {
               <div className="col-lg-3 col-md-6">
                 <h5 className="text-white mb-4">Get In Touch</h5>
                 <p className="mb-2">
-                  <i className="fa fa-map-marker-alt me-3"></i>123 Street, New
-                  York, USA
-                </p>
+                  <i className="fa fa-map-marker-alt me-3"></i>Ibadan, Oyo State</p>
                 <p className="mb-2">
-                  <i className="fa fa-phone-alt me-3"></i>+012 345 67890
-                </p>
+                  <i className="fa fa-phone-alt me-3"></i>+2348149473231</p>
                 <p className="mb-2">
                   <i className="fa fa-envelope me-3"></i>info@example.com
                 </p>
@@ -86,8 +83,8 @@ function Footer() {
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
-                <h5 className="text-white mb-4">Newsletter</h5>
-                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                <h5 className="text-white mb-4">THEME</h5>
+                <p>BIH|ARBITRUM BLOCKCHAIN HACKATON </p>
                 <div
                   className="position-relative mx-auto"
                   style={{ maxWidth: "400px" }}
@@ -113,11 +110,11 @@ function Footer() {
                 <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
                   &copy;{" "}
                   <a className="border-bottom" href="#">
-                    Makaan
+                    TOBA|DASLAW|PRECIOUS
                   </a>
                   , All Right Reserved. Designed By{" "}
                   <a className="border-bottom" href="https://htmlcodex.com">
-                    Ayush Dhamankar
+                    TEAM DAIMOND
                   </a>
                 </div>
               </div>

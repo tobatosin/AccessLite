@@ -49,7 +49,7 @@ function Navbar({ saveState }) {
           data-bs-toggle="collapse"
           data-bs-target="#navbarCollapse"
         >
-          <span className="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <div className="navbar-nav ms-auto">

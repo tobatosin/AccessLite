@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Properties from "../Properties/Properties";
-import { FaHouseChimneyWindow } from "react-icons/fa6";
+// import { FaHouseChimneyWindow } from "react-icons/fa";
 
 function Hero({ state }) {
   const [Property, setProperty] = useState("");
