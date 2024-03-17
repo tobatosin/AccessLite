@@ -3,6 +3,43 @@ import { Link } from "react-router-dom";
 import ABI from "./ABI.json";
 import Web3 from "web3";
 import { FaHandshake } from "react-icons/fa";
+// import './Navbar.css'; // 
+
+const GoToTopButton = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <button
+      className={`go-to-top-button ${isVisible ? 'visible' : ''}`}
+      onClick={scrollToTop}
+    >
+      Go to Top
+    </button>
+  );
+};
 
 function Navbar({ saveState }) {
   const [connected, setConnected] = useState(true);
@@ -33,13 +70,7 @@ function Navbar({ saveState }) {
           className="navbar-brand d-flex align-items-center text-center"
         >
           <div className="icon p-2 me-2">
-            {/* <img
-              className="img-fluid img--secondary"
-              src="./src/img/icon-deal.png"
-              alt="Icon"
-              style={{ width: "30px", height: "30px" }}
-            /> */}
-            <FaHandshake  className="img--secondary"/>
+            <FaHandshake className="img--secondary" />
           </div>
           <h1 className="m-0 text-secondary">AccessLite</h1>
         </Link>
@@ -59,22 +90,20 @@ function Navbar({ saveState }) {
             <Link to="/properties" className="nav-item nav-link">
               Explore
             </Link>
-
-
             <Link to="/my_properties" className="nav-item nav-link">
               My Property
             </Link>
-
           </div>
-          <Link
+          <button
             className="btn btn-secondary px-3 d-none d-lg-flex"
             onClick={init}
             disabled={!connected}
           >
             {connected ? "Connect Metamask" : "Connected"}
-          </Link>
+          </button>
         </div>
       </nav>
+      <GoToTopButton />
     </div>
   );
 }
