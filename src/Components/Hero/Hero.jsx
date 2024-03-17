@@ -257,12 +257,15 @@ function Hero({ state }) {
         </div>
       </div>
 
-      <Properties />
-      <div class="col-12 text-center">
-        <Link class="btn btn-primary py-3 px-5" to="/properties">
+      <Properties/>
+      <div className="container-fluid bg-white">
+      <div class="col-12 text-center bg-white">
+        <Link class="btn btn-secondary py-3 px-5" to="/properties">
           Browse More Property
         </Link>
       </div>
+      </div>
+      
     </>
   );
 }

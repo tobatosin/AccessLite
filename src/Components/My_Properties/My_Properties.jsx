@@ -21,7 +21,7 @@ function My_Properties({ state }) {
   }, [state]);
   return (
     <>
-      <div class="container-xxl py-5 property ">
+      <div class="container-xxl py-5 property bg-white ">
         <div class="container">
           <div class="row g-0 gx-5 align-items-end">
             <div class="col-lg-6">

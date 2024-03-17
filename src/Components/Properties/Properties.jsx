@@ -109,11 +109,9 @@ function PropertyPage() {
 
 
   return (
-    <div className="container mt-5 bg-white">
-        <div>
-          
-        </div>
-      <div class="row g-0 gx-5 align-items-end">
+    <div className="container-fluid bg-white" >
+        <div className="container mt-5 bg-white">
+        <div class="row g-0 gx-5 align-items-end">
         <div class="col-lg-6">
           <div
             class="text-start mx-auto mb-5 wow slideInLeft"
@@ -140,13 +138,18 @@ function PropertyPage() {
                 <p className="card-text">Description: {property.description}</p>
                 <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
                 <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
-                <Link to={`/properties/${property.id}`} className="btn btn-primary">View Details</Link>
-                <button className="btn btn-primary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+                <div className="gap-3 d-flex">
+                <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
+                <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+                </div>
+                
               </div>
             </div>
           </div>
         ))}
       </div>
+        </div>
+      
     </div>
 
   );
