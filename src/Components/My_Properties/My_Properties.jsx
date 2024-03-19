@@ -38,7 +38,7 @@ function My_Properties({ state }) {
               </div>
             </div>
           </div>
-          <div class="tab-content">
+          <div class="tab-content ">
             <div id="tab-1" class="tab-pane fade show p-0 active">
               <div class="row g-4">
                 {Property !== "" &&
@@ -62,15 +62,15 @@ function My_Properties({ state }) {
                               </a>
 
                               {Property[9] === Account ? (
-                                <div className="rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style={{ backgroundColor: "green" }}>
+                                <div className="rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style={{ backgroundColor: "white" }}>
                                   Purchased
                                 </div>
                               ) : Property[9] === "0x0000000000000000000000000000000000000000" ? (
-                                <div className="bg-primary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
+                                <div className="bg-white rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">
                                   For Sell
                                 </div>
                               ) : (
-                                <div className="rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style={{ backgroundColor: "#dd1a1a" }}>
+                                <div className="rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3" style={{ backgroundColor: "#fff" }}>
                                   Sold
                                 </div>
                               )   

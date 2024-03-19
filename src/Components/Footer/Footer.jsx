@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Footer() {
     return(
         <>
@@ -39,9 +41,10 @@ function Footer() {
                 <a className="btn btn-link text-white-50" href="">
                   Contact Us
                 </a>
-                <a className="btn btn-link text-white-50" href="">
-                  Our Services
-                </a>
+                
+                <Link to="/Services" className="btn btn-link text-white-50">Our Services</Link>
+              
+                
                 <a className="btn btn-link text-white-50" href="">
                   Privacy Policy
                 </a>
@@ -96,7 +99,7 @@ function Footer() {
                   />
                   <button
                     type="button"
-                    className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                    className="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2"
                   >
                     SignUp
                   </button>

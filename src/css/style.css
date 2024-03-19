@@ -2,7 +2,7 @@
 :root {
     --primary: #FF6922;
     --secondary: #FF6922;
-    --light: #EFFDF5;
+    --light: #ffffff;
     --dark: #0E2E50;
 }
 
@@ -73,7 +73,8 @@
     margin-top: 45px;
     padding: 0 3rem;
     transition: .5s;
-    z-index: 9999;
+    z-index: 9999;background-color: #FFFFFF;
+
 }
 .img--secondary{
     color: #FF6922;
@@ -208,6 +209,7 @@
 .breadcrumb-item + .breadcrumb-item::before {
     color: #DDDDDD;
 }
+
 
 
 /*** Icon ***/

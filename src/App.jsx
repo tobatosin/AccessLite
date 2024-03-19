@@ -8,6 +8,7 @@ import Transactions from "./Components/Transactions/Transactions";
 import Footer from "./Components/Footer/Footer";
 import PropertyDetails from "./Components/propertydetails/propertydetails";
 import PropertyPage from "./Components/propertypage/propertypage";
+import Services from "./Components/Services/Services"
 import p1 from "./img/Img-Apart-1/p1.webp"
 import p2 from "./img/Img-Apart-1/p2.webp"
 import p3 from "./img/Img-Apart-1/p3.webp"
@@ -88,6 +89,8 @@ function App() {
             <Route path=":userId" element={<Transactions state={state} />} />
           </Route>
           <Route path="/properties" element={<Properties state={state} />} />
+          <Route path="/Services" element={<Services state={state} />} />
+
           <Route path="/my_properties" element={<My_Properties state={state} />} />
 
           <Route path="/properties/:id" element={<PropertyDetails properties={propertiesData} />
