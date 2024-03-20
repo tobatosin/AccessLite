@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Properties from "../Properties/Properties";
 // import { FaHouseChimneyWindow } from "react-icons/fa";
+import Apartment from "../Properties/cards/apartment";
 
 function Hero({ state }) {
   const [Property, setProperty] = useState("");
@@ -32,11 +33,11 @@ function Hero({ state }) {
         <div className="row g-0 align-items-center flex-column-reverse flex-md-row">
           <div className="col-md-6 p-5 mt-lg-5">
             <h1 className="display-5 animated fadeIn mb-4 mt-5">
-            Welcome to <span className="text-secondary">AccessLite</span> Real Estate Dapp
+              Welcome to <span className="text-secondary">AccessLite</span> Real Estate Dapp
             </h1>
             <p className="animated fadeIn mb-4 pb-2">
               Here , We make real estate investment meets innovation. Invest in prime properties through tokenization and become a fractional owner today! <br />
-              Join the future of property investment with <span className="text-secondary">AccessLite</span>. 
+              Join the future of property investment with <span className="text-secondary">AccessLite</span>.
             </p>
             <a
               href=""
@@ -257,15 +258,15 @@ function Hero({ state }) {
         </div>
       </div>
 
-      <Properties/>
+      <Apartment />
       <div className="container-fluid bg-white">
-      <div class="col-12 text-center bg-white">
-        <Link class="btn btn-secondary py-3 px-5" to="/properties">
-          Browse More Property
-        </Link>
+        <div class="col-12 text-center bg-white">
+          <Link class="btn btn-secondary py-3 px-5" to="/properties">
+            Browse More Property
+          </Link>
+        </div>
       </div>
-      </div>
-      
+
     </>
   );
 }
