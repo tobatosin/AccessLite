@@ -374,6 +374,46 @@
 }
 
 
+/* SERVICES  */
+
+.box{
+    border: n0ne;
+    width: 40%;
+    height: 30vh;
+    border-radius: 10px;
+    box-shadow: 1px 5px 8px grey;
+    background-color: #FF6922;
+    transition: all 0.3s;
+}
+.ff{
+    font-size: 27px;
+}
+.boxx{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.box:hover{
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+@media (max-width: 520px){
+    .boxx{
+        font-size: 10px;
+    }
+    .ff{
+        font-size: 10px;
+    }
+}
+
+/* About  */
+
+.imgg{
+    width: 40%;
+}
+
 /*** Footer ***/
 .footer .btn.btn-social {
     margin-right: 5px;
