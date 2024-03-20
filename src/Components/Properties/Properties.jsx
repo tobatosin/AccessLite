@@ -110,195 +110,195 @@ function PropertyPage() {
 
   return (
     <div className="container-fluid bg-white" >
-        <div className="container mt-5 bg-white">
-            <div class="row g-0 gx-5 align-items-end">
-              <div class="col-lg-6">
-                <div
-                  class="text-start mx-auto mb-5 wow slideInLeft"
-                  data-wow-delay="0.1s"
-                >
-                  <h1 class="mb-3">My Property Listing</h1>
-                  <p>
-                    Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut
-                    dolore lorem kasd vero ipsum sit eirmod sit diam justo sed
-                    rebum.
-                    Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut
-                    dolore lorem kasd vero ipsum sit eirmod sit diam justo sed
-                    rebum.
-                  </p>
-                </div>
-              </div>
-          </div>
-
-            <div className="text-dark fs-3 fw-bold mb-3">Apartments</div>
-          <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-            {properties.map(property => (
-            <div key={property.id} className="col mb-4 wow fadeInUp " data-wow-delay="0.5s">
-            <div className="card">
-              <img src={property.image} className="card-img-top" alt={property.name} />
-              <div className="card-body">
-                <h5 className="card-title">{property.name}</h5>
-                <p className="card-text">Price: ${property.price}</p>
-                <p className="card-text">Description: {property.description}</p>
-                <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
-                <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
-                <div className="gap-3 d-flex">
-                <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
-                <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
-              </div>
-             </div>
+      <div className="container mt-5 bg-white">
+        <div class="row g-0 gx-5 align-items-end">
+          <div class="col-lg-6">
+            <div
+              class="text-start mx-auto mb-5 wow slideInLeft"
+              data-wow-delay="0.1s"
+            >
+              <h1 class="mb-3">My Property Listing</h1>
+              <p>
+                Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut
+                dolore lorem kasd vero ipsum sit eirmod sit diam justo sed
+                rebum.
+                Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut
+                dolore lorem kasd vero ipsum sit eirmod sit diam justo sed
+                rebum.
+              </p>
             </div>
           </div>
-          
-        ))}
-        {properties.map(property => (
-          <div key={property.id} className="col mb-4 wow fadeInUp " data-wow-delay="0.5s">
-            <div className="card">
-              <img src={property.image} className="card-img-top" alt={property.name} />
-              <div className="card-body">
-                <h5 className="card-title">{property.name}</h5>
-                <p className="card-text">Price: ${property.price}</p>
-                <p className="card-text">Description: {property.description}</p>
-                <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
-                <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
-                <div className="gap-3 d-flex">
-                <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
-                <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-        ))}
         </div>
 
-          <div className="text-dark fs-3 fw-bold mb-3">Offices</div>
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-             {properties.map(property => (
+        <div className="text-dark fs-3 fw-bold mb-3">Apartments</div>
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+          {properties.map(property => (
             <div key={property.id} className="col mb-4 wow fadeInUp " data-wow-delay="0.5s">
-            <div className="card">
-              <img src={property.image} className="card-img-top" alt={property.name} />
-              <div className="card-body">
-                <h5 className="card-title">{property.name}</h5>
-                <p className="card-text">Price: ${property.price}</p>
-                <p className="card-text">Description: {property.description}</p>
-                <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
-                <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
-                <div className="gap-3 d-flex">
-                <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
-                <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+              <div className="card">
+                <img src={property.image} className="card-img-top" alt={property.name} />
+                <div className="card-body">
+                  <h5 className="card-title">{property.name}</h5>
+                  <p className="card-text">Price: ${property.price}</p>
+                  <p className="card-text">Description: {property.description}</p>
+                  <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
+                  <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
+                  <div className="gap-3 d-flex">
+                    <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
+                    <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+                  </div>
+                </div>
               </div>
-             </div>
             </div>
-          </div>
-          
-        ))}
-             {properties.map(property => (
+
+          ))}
+          {properties.map(property => (
             <div key={property.id} className="col mb-4 wow fadeInUp " data-wow-delay="0.5s">
-            <div className="card">
-              <img src={property.image} className="card-img-top" alt={property.name} />
-              <div className="card-body">
-                <h5 className="card-title">{property.name}</h5>
-                <p className="card-text">Price: ${property.price}</p>
-                <p className="card-text">Description: {property.description}</p>
-                <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
-                <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
-                <div className="gap-3 d-flex">
-                <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
-                <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+              <div className="card">
+                <img src={property.image} className="card-img-top" alt={property.name} />
+                <div className="card-body">
+                  <h5 className="card-title">{property.name}</h5>
+                  <p className="card-text">Price: ${property.price}</p>
+                  <p className="card-text">Description: {property.description}</p>
+                  <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
+                  <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
+                  <div className="gap-3 d-flex">
+                    <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
+                    <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+                  </div>
+
+                </div>
               </div>
-             </div>
             </div>
-          </div>
-          
-        ))}
-           ,
-            </div>
-          <div className="text-dark fs-3 fw-bold mb-3">Lands</div>
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-             {properties.map(property => (
+          ))}
+        </div>
+
+        <div className="text-dark fs-3 fw-bold mb-3">Offices</div>
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+          {properties.map(property => (
             <div key={property.id} className="col mb-4 wow fadeInUp " data-wow-delay="0.5s">
-            <div className="card">
-              <img src={property.image} className="card-img-top" alt={property.name} />
-              <div className="card-body">
-                <h5 className="card-title">{property.name}</h5>
-                <p className="card-text">Price: ${property.price}</p>
-                <p className="card-text">Description: {property.description}</p>
-                <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
-                <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
-                <div className="gap-3 d-flex">
-                <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
-                <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+              <div className="card">
+                <img src={property.image} className="card-img-top" alt={property.name} />
+                <div className="card-body">
+                  <h5 className="card-title">{property.name}</h5>
+                  <p className="card-text">Price: ${property.price}</p>
+                  <p className="card-text">Description: {property.description}</p>
+                  <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
+                  <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
+                  <div className="gap-3 d-flex">
+                    <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
+                    <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+                  </div>
+                </div>
               </div>
-             </div>
             </div>
-          </div>
-          
-        ))}
-             {properties.map(property => (
+
+          ))}
+          {properties.map(property => (
             <div key={property.id} className="col mb-4 wow fadeInUp " data-wow-delay="0.5s">
-            <div className="card">
-              <img src={property.image} className="card-img-top" alt={property.name} />
-              <div className="card-body">
-                <h5 className="card-title">{property.name}</h5>
-                <p className="card-text">Price: ${property.price}</p>
-                <p className="card-text">Description: {property.description}</p>
-                <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
-                <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
-                <div className="gap-3 d-flex">
-                <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
-                <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+              <div className="card">
+                <img src={property.image} className="card-img-top" alt={property.name} />
+                <div className="card-body">
+                  <h5 className="card-title">{property.name}</h5>
+                  <p className="card-text">Price: ${property.price}</p>
+                  <p className="card-text">Description: {property.description}</p>
+                  <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
+                  <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
+                  <div className="gap-3 d-flex">
+                    <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
+                    <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+                  </div>
+                </div>
               </div>
-             </div>
             </div>
-          </div>
-          
-        ))}
-           ,
-            </div>
-          <div className="text-dark fs-4 fw-bold mb-3">Outlets</div>
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-             {properties.map(property => (
+
+          ))}
+          ,
+        </div>
+        <div className="text-dark fs-3 fw-bold mb-3">Lands</div>
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+          {properties.map(property => (
             <div key={property.id} className="col mb-4 wow fadeInUp " data-wow-delay="0.5s">
-            <div className="card">
-              <img src={property.image} className="card-img-top" alt={property.name} />
-              <div className="card-body">
-                <h5 className="card-title">{property.name}</h5>
-                <p className="card-text">Price: ${property.price}</p>
-                <p className="card-text">Description: {property.description}</p>
-                <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
-                <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
-                <div className="gap-3 d-flex">
-                <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
-                <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+              <div className="card">
+                <img src={property.image} className="card-img-top" alt={property.name} />
+                <div className="card-body">
+                  <h5 className="card-title">{property.name}</h5>
+                  <p className="card-text">Price: ${property.price}</p>
+                  <p className="card-text">Description: {property.description}</p>
+                  <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
+                  <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
+                  <div className="gap-3 d-flex">
+                    <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
+                    <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+                  </div>
+                </div>
               </div>
-             </div>
             </div>
-          </div>
-          
-        ))}
-             {properties.map(property => (
+
+          ))}
+          {properties.map(property => (
             <div key={property.id} className="col mb-4 wow fadeInUp " data-wow-delay="0.5s">
-            <div className="card">
-              <img src={property.image} className="card-img-top" alt={property.name} />
-              <div className="card-body">
-                <h5 className="card-title">{property.name}</h5>
-                <p className="card-text">Price: ${property.price}</p>
-                <p className="card-text">Description: {property.description}</p>
-                <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
-                <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
-                <div className="gap-3 d-flex">
-                <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
-                <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+              <div className="card">
+                <img src={property.image} className="card-img-top" alt={property.name} />
+                <div className="card-body">
+                  <h5 className="card-title">{property.name}</h5>
+                  <p className="card-text">Price: ${property.price}</p>
+                  <p className="card-text">Description: {property.description}</p>
+                  <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
+                  <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
+                  <div className="gap-3 d-flex">
+                    <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
+                    <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+                  </div>
+                </div>
               </div>
-             </div>
             </div>
-          </div>
-          
-        ))}
-           ,
+
+          ))}
+          ,
+        </div>
+        <div className="text-dark fs-4 fw-bold mb-3">Outlets</div>
+        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+          {properties.map(property => (
+            <div key={property.id} className="col mb-4 wow fadeInUp " data-wow-delay="0.5s">
+              <div className="card">
+                <img src={property.image} className="card-img-top" alt={property.name} />
+                <div className="card-body">
+                  <h5 className="card-title">{property.name}</h5>
+                  <p className="card-text">Price: ${property.price}</p>
+                  <p className="card-text">Description: {property.description}</p>
+                  <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
+                  <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
+                  <div className="gap-3 d-flex">
+                    <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
+                    <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+                  </div>
+                </div>
+              </div>
             </div>
-              
+
+          ))}
+          {properties.map(property => (
+            <div key={property.id} className="col mb-4 wow fadeInUp " data-wow-delay="0.5s">
+              <div className="card">
+                <img src={property.image} className="card-img-top" alt={property.name} />
+                <div className="card-body">
+                  <h5 className="card-title">{property.name}</h5>
+                  <p className="card-text">Price: ${property.price}</p>
+                  <p className="card-text">Description: {property.description}</p>
+                  <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
+                  <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
+                  <div className="gap-3 d-flex">
+                    <Link to={`/properties/${property.id}`} className="btn btn-secondary ">View Details</Link>
+                    <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          ))}
+          ,
+        </div>
+
       </div>
     </div>
 
