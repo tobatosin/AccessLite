@@ -232,23 +232,22 @@ function Hero({ state }) {
               </div>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-              <h1 class="mb-4">#1 Place To Find The Perfect Property</h1>
+              <h1 class="mb-4">Places To Find The Perfect Property</h1>
               <p class="mb-4">
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+                {/* Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
                 Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                sed stet lorem sit clita duo justo magna dolore erat amet
+                sed stet lorem sit clita duo justo magna dolore erat amet */}
+                We have got numerous places of your choice coupled with beautiful apartments. Also, we work with your budget. There is always a fractional or full token available after aquisition. Our services extends too
               </p>
               <p>
-                <i class="fa fa-check text-secondary me-3"></i>Tempor erat elitr
-                rebum at clita
+                <i class="fa fa-check text-secondary me-3"></i> Africa includes Nigeria , South Africa and Cape vade
+                
               </p>
               <p>
-                <i class="fa fa-check text-secondary me-3"></i>Aliqu diam amet
-                diam et eos
+                <i class="fa fa-check text-secondary me-3"></i> Europe includes London , Derby , Manchester and Leiceister City
               </p>
               <p>
-                <i class="fa fa-check text-secondary me-3"></i>Clita duo justo
-                magna dolore erat amet
+                <i class="fa fa-check text-secondary me-3"></i> North America includes New york, Carlifonia , Texas and Maine 
               </p>
               <a class="btn btn-secondary py-3 px-5 mt-3" href="">
                 Read More
