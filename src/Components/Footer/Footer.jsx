@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { FaArrowLeft } from "react-icons/fa6";
 
 function Footer() {
     return(
@@ -10,7 +11,7 @@ function Footer() {
           <div className="container py-5">
             <div className="row g-5">
               <div className="col-lg-3 col-md-6">
-                <h5 className="text-white mb-4">Get In Touch</h5>
+                <h5 className="text-white mb-4">Contact Us</h5>
                 <p className="mb-2">
                   <i className="fa fa-map-marker-alt me-3"></i>Ibadan, Oyo State</p>
                 <p className="mb-2">
@@ -35,23 +36,14 @@ function Footer() {
               </div>
               <div className="col-lg-3 col-md-6">
                 <h5 className="text-white mb-4">Quick Links</h5>
-                {/* <a className="btn btn-link text-white-50" href="">
-                  About Us
-                </a> */}
-                <Link to="/About" className="btn btn-link text-white-50">About</Link>
-                <a className="btn btn-link text-white-50" href="">
-                  Contact Us
-                </a>
+                
+                <Link to="/About" className="btn btn-link text-white-50">About Us</Link>
                 
                 <Link to="/Services" className="btn btn-link text-white-50">Our Services</Link>
               
-                
-                <a className="btn btn-link text-white-50" href="">
-                  Privacy Policy
-                </a>
-                <a className="btn btn-link text-white-50" href="">
-                  Terms & Condition
-                </a>
+                <p className=" btn-link text-white-50">
+                 <span className='fs-5'><FaArrowLeft /></span>  Contact Us
+                </p>
               </div>
               <div className="col-lg-3 col-md-6">
                 <h5 className="text-white mb-4">Photo Gallery</h5>
