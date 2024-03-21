@@ -100,18 +100,18 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="container">
+          <div className="container">  
             <div className="copyright">
               <div className="row">
                 <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
                   &copy;{" "}
-                  <a className="border-bottom" href="#">
+                  <p className="border-bottom" href="#">
                     TOBA|DASLAW|PRECIOUS
-                  </a>
-                  , All Right Reserved. Designed By{" "}
-                  <a className="border-bottom" href="https://htmlcodex.com">
+                  </p>
+                  All Right Reserved. Designed By{" "}
+                  <p className="border-bottom" >
                     TEAM DAIMOND
-                  </a>
+                  </p>
                 </div>
               </div>
             </div>
