@@ -117,8 +117,8 @@ function PropertyPage() {
 
   return (
     <div className="container-fluid bg-white">
-      <div className="container mt-5 bg-white">
-        {/* Property rendering */}
+      {/* <div className="container mt-5 bg-white">
+      
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
           {properties.map(property => (
             <div key={property.id} className="col mb-4 wow fadeInUp" data-wow-delay="0.5s">
@@ -131,7 +131,7 @@ function PropertyPage() {
                   <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
                   <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
                   <div className="gap-3 d-flex">
-                    <Link to={`/properties/${property.id}`} className="btn btn-secondary">View Details</Link>
+
                     <input
                       type="number"
                       className="form-control"
@@ -140,12 +140,15 @@ function PropertyPage() {
                     />
                     <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
                   </div>
+
+                  
+                  <Link to={`/properties/${property.id}`} className="btn btn-secondary">View Details</Link>
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       <Apartment />
       <Office />
       <Outlets />
