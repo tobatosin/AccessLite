@@ -5,6 +5,7 @@ import Web3 from "web3";
 import { FaHandshake } from "react-icons/fa";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
+
 // import './Navbar.css'; // 
 
 const GoToTopButton = () => {
@@ -97,7 +98,8 @@ function Navbar({ saveState }) {
             </Link>
 
           </div>
-          <ConnectButton />
+          
+          <ConnectButton  />
           {/* <button
             className="btn btn-secondary px-3 d-none d-lg-flex"
             onClick={init}
