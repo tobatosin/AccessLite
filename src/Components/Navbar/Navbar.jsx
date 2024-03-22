@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import ABI from "./ABI.json";
 import Web3 from "web3";
 import { FaHandshake } from "react-icons/fa";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+
 // import './Navbar.css'; // 
 
 const GoToTopButton = () => {
@@ -93,14 +95,16 @@ function Navbar({ saveState }) {
             <Link to="/my_properties" className="nav-item nav-link">
               My Property
             </Link>
+
           </div>
-          <button
+          <ConnectButton />
+          {/* <button
             className="btn btn-secondary px-3 d-none d-lg-flex"
             onClick={init}
             disabled={!connected}
           >
             {connected ? "Connect Metamask" : "Connected"}
-          </button>
+          </button> */}
         </div>
       </nav>
       <GoToTopButton />

@@ -91,6 +91,8 @@ function App() {
           <Route path="/properties" element={<Properties state={state} />} />
           <Route path="/Services" element={<Services state={state} />} />
 
+
+
           <Route path="/my_properties" element={<My_Properties state={state} />} />
 
           <Route path="/properties/:id" element={<PropertyDetails properties={propertiesData} />
