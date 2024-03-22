@@ -374,6 +374,110 @@
 }
 
 
+/* SERVICES  */
+
+.box{
+    border: n0ne;
+    width: 40%;
+    height: 30vh;
+    border-radius: 10px;
+    box-shadow: 1px 5px 8px grey;
+    background-color: #FF6922;
+    transition: all 0.3s;
+}
+.ff{
+    font-size: 27px;
+}
+.boxx{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.box:hover{
+    transform: scale(1.15);
+    cursor: pointer;
+}
+
+@media (max-width: 520px){
+    .boxx{
+        font-size: 10px;
+    }
+    .ff{
+        font-size: 10px;
+    }
+}
+
+/* About  */
+
+.imgg{
+    width: 40%;
+}
+.boxi{
+    border: n0ne;
+    width: 35%;
+    height: 18vh;
+    border-radius: 10px;
+    box-shadow: 1px 5px 8px grey;
+    background-color: #FF6922;
+    transition: all 0.3s;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+}
+.boxi:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.aapa{
+    display: flex;
+}
+.lastbox{
+    display: flex;
+    flex-direction: column;
+}
+.boxii{
+    border: n0ne;
+    width: 35%;
+    height: 18vh;
+    border-radius: 10px;
+    box-shadow: 1px 5px 8px grey;
+    background-color: #FF6922;
+    transition: all 0.3s; 
+}
+.boxii:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.text14{
+    font-size: 13px;
+    text-align: center;
+}
+.text13{
+    font-size: 10px;
+    text-align: center;
+}
+
+@media (max-width: 992px){
+    .text14{
+        font-size: 10px;
+        text-align: center;
+    }
+    .text13{
+        font-size: 7px;
+        text-align: center;
+    }
+    .lastbox{
+        display: inline;
+    }
+    .aapa{
+        display: inline;
+        .imgg{
+            width: 95%;
+        }
+    }
+}
 /*** Footer ***/
 .footer .btn.btn-social {
     margin-right: 5px;
