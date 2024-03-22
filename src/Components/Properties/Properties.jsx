@@ -99,10 +99,10 @@ function PropertyPage() {
       const accounts = await web3.eth.getAccounts();
       const account = accounts[0];
 
-      const tokenSaleContract = new web3.eth.Contract(realEstateAbi, '0xF5EF9b554f6DF5aF8d1218913425FaF4dFDc31a8');
+      const tokenSaleContract = new web3.eth.Contract(realEstateAbi, '0x5299edAe22d7D0E8590724e18424545D320468A2');
 
       // Pass the amount in Wei as an argument when calling buyTokens
-      const transaction = await tokenSaleContract.methods.buyTokens(amountInWei).send({ from: account, value: amountInWei });
+      const transaction = await tokenSaleContract.methods.buyTokens().send({ from: account, value: "10000000000" });
       console.log("Transaction successful:", transaction);
     } catch (error) {
       console.error("Error buying tokens:", error);
