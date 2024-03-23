@@ -10,12 +10,12 @@ import PropertyDetails from "./Components/propertydetails/propertydetails";
 import PropertyPage from "./Components/propertypage/propertypage";
 import Services from "./Components/Services/Services"
 import About from "./Components/About/About";
-import p1 from "./img/Img-Apart-1/p1.webp"
-import p2 from "./img/Img-Apart-1/p2.webp"
-import p3 from "./img/Img-Apart-1/p3.webp"
-import p4 from "./img/Img-Apart-1/p4.webp"
-import p5 from "./img/Img-Apart-1/p5.webp"
-import p6 from "./img/Img-Apart-1/p6.webp"
+import p1 from "./img/Img-Apart-1/p1.png"
+import p2 from "./img/Img-Apart-1/p2.png"
+import p3 from "./img/Img-Apart-1/p3.png"
+import p4 from "./img/Img-Apart-1/p4.png"
+import p5 from "./img/Img-Apart-1/p5.png"
+import p6 from "./img/Img-Apart-1/p6.png"
 import propertyImage1 from "./img/property-1.jpg"
 import propertyImage2 from "./img/property-2.jpg"
 
@@ -62,8 +62,6 @@ function App() {
       }
 
       // { id: 1, name: "Property 1", price: 100000, description: "Description 1", additionalImage: [p1, p2] },
-      // { id: 2, name: "Property 2", price: 150000, description: "Description 2", additionalImage: [p1, p2] },
-      // { id: 3, name: "Property 3", price: 200000, description: "Description 3", additionalImage: [p1, p2] }
     ];
     setProperties(fetchedProperties);
   }, []);
@@ -92,9 +90,6 @@ function App() {
           <Route path="/properties" element={<Properties state={state} />} />
           <Route path="/About" element={<About state={state} />} />
           <Route path="/Services" element={<Services state={state} />} />
-
-
-
           <Route path="/my_properties" element={<My_Properties state={state} />} />
 
           <Route path="/properties/:id" element={<PropertyDetails properties={propertiesData} />

@@ -9,10 +9,10 @@ import Outlets from "./cards/outlet";
 import Office from "./cards/offices";
 import Practice from "./cards/practice";
 import Practice2 from "./cards/Practice2";
-// import Real from "./cards/real";
+
 
 import realEstateAbi from '../../contracts/realEstateAbi.json';
-// import NFTViewer from "./cards/viewer";
+
 
 function PropertyPage() {
   const [web3, setWeb3] = useState(null);
@@ -121,45 +121,12 @@ function PropertyPage() {
 
   return (
     <div className="container-fluid bg-white">
-      {/* <div className="container mt-5 bg-white">
-      
-        <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3">
-          {properties.map(property => (
-            <div key={property.id} className="col mb-4 wow fadeInUp" data-wow-delay="0.5s">
-              <div className="card">
-                <img src={property.image} className="card-img-top" alt={property.name} />
-                <div className="card-body">
-                  <h5 className="card-title">{property.name}</h5>
-                  <p className="card-text">Price: ${property.price}</p>
-                  <p className="card-text">Description: {property.description}</p>
-                  <p className="card-text">Return per Token (Per Year): ${property.returnPerTokenPerYear}</p>
-                  <p className="card-text">Rental Amount: ${property.rentalAmount} per month</p>
-                  <div className="gap-3 d-flex">
-
-                    <input
-                      type="number"
-                      className="form-control"
-                      value={tokenAmount}
-                      onChange={handleTokenAmountChange}
-                    />
-                    <button className="btn btn-secondary" onClick={() => buyTokens(property.id)}>Buy Tokens</button>
-                  </div>
-
-                  
-                  <Link to={`/properties/${property.id}`} className="btn btn-secondary">View Details</Link>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div> */}
       <Apartment />
       <Office />
       <Outlets />
       <Practice />
       <Practice2 />
-      {/* <Real />  */}
-      {/* <NFTViewer /> */}
+     
     </div>
 
   );
