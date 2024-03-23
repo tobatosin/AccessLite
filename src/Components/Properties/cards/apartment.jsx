@@ -6,6 +6,7 @@ import Web3 from "web3";
 import PropertyImage1 from "../../../img/property-1.jpg";
 import PropertyImage2 from "../../../img/property-2.jpg";
 import PropertyImage3 from "../../../img/property-3.jpg";
+import realEstateAbi from '../../../contracts/realEstateAbi.json';
 function Apartment() {
     const [web3, setWeb3] = useState(null);
     const [properties, setProperties] = useState([]);
@@ -70,37 +71,31 @@ function Apartment() {
     }, []);
 
 
-    async function buyTokens(propertyId) {
-        try {
-            if (!connected) {
-                throw new Error("Please install MetaMask or use a dapp browser.");
+    const buyTokens = async (propertyIndex) => {
+        // Connect to the Ethereum blockchain
+        if (window.ethereum) {
+            window.web3 = new Web3(window.ethereum);
+            await window.ethereum.enable();
+            const web3 = window.web3;
+
+            // Instantiate your smart contract
+            const contractAddress = "0x5299edAe22d7D0E8590724e18424545D320468A2";
+            const contract = new web3.eth.Contract(realEstateAbi, contractAddress);
+
+            // Call the buyTokens function
+            try {
+                const accounts = await web3.eth.getAccounts();
+                await contract.methods.buyTokens().send({ value: "10000000000", from: accounts[0] });
+                alert("Tokens bought successfully for property " + propertyIndex);
+            } catch (error) {
+                console.error("Error buying tokens:", error);
+                alert("Failed to buy tokens for property " + propertyIndex);
             }
-
-            if (tokenAmount <= 0) {
-                throw new Error("Please enter a valid token amount.");
-            }
-
-            if (!tokenPriceEther) {
-                throw new Error("Token price in Ether is not available.");
-            }
-
-            // Calculate the amount in Ether
-            const amountInEther = tokenAmount * STATIC_TOKEN_PRICE / STATIC_ETHER_PRICE;
-
-            // Convert the amount to Wei
-            const amountInWei = web3.utils.toWei(amountInEther.toString(), 'ether');
-            const accounts = await web3.eth.getAccounts();
-            const account = accounts[0];
-
-            const tokenSaleContract = new web3.eth.Contract(realEstateAbi, '0x5299edAe22d7D0E8590724e18424545D320468A2');
-
-            // Pass the amount in Wei as an argument when calling buyTokens
-            const transaction = await tokenSaleContract.methods.buyTokens(amountInWei).send({ from: account, value: amountInWei });
-            console.log("Transaction successful:", transaction);
-        } catch (error) {
-            console.error("Error buying tokens:", error);
+        } else {
+            alert("Please install MetaMask to use this feature.");
         }
-    }
+    };
+
 
 
 
