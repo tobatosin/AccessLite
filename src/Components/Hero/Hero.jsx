@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Properties from "../Properties/Properties";
 // import { FaHouseChimneyWindow } from "react-icons/fa";
 import Apartment from "../Properties/cards/apartment";
+import p6 from "../../img/Img-Apart-1/p6.png"
 
 function Hero({ state }) {
   const [Property, setProperty] = useState("");
@@ -50,7 +51,7 @@ function Hero({ state }) {
             <div className="">
               <img
                 className="img-fluid"
-                src={"./src/img/p17.png"}
+                src={p6}
                 alt=""
               />
             </div>
