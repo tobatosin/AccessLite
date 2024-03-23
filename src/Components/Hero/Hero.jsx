@@ -28,8 +28,8 @@ function Hero({ state }) {
   }, [state]);
   return (
     <>
-      {/* Header Start */}
-      <div className="container-fluid  header bg-white p-0 home">
+   
+      <div className="container-fluid  header bg-white p-0">
         <div className="row g-0 align-items-center h-100 vh-100 flex-column-reverse flex-md-row">
           <div className="col-md-6 p-5  mt-lg-5">
             <h1 className="display-5 animated fadeIn mb-4 mt-5">
@@ -64,7 +64,7 @@ function Hero({ state }) {
         <div class="container">
           <div class="row g-5 align-items-center ">
             <div class="col-lg-6 fadeIn">
-              <div class="about-img position-relative overflow-hidden p-5 pe-0">
+              <div class=" position-relative overflow-hidden p-5 pe-0">
                 <img class="img-fluid w-100" src={"./src/img/Img-Apart-1/p6.png"} />
               </div>
             </div>
