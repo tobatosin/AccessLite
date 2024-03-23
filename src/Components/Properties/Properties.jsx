@@ -7,8 +7,8 @@ import PropertyImage3 from "../../img/property-3.jpg";
 import Apartment from "./cards/apartment";
 import Outlets from "./cards/outlet";
 import Office from "./cards/offices";
-import Practice from "./cards/practice";
-import Practice2 from "./cards/Practice2";
+// import Practice from "./cards/practice";
+// import Practice2 from "./cards/Practice2";
 
 
 import realEstateAbi from '../../contracts/realEstateAbi.json';
@@ -124,8 +124,8 @@ function PropertyPage() {
       <Apartment />
       <Office />
       <Outlets />
-      <Practice />
-      <Practice2 />
+      {/* <Practice /> */}
+      {/* <Practice2 /> */}
      
     </div>
 

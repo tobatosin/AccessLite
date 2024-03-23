@@ -36,7 +36,7 @@ function App() {
         price: 100000,
 
         additionalImages: [p1, p2, p3],
-        returnPerTokenPerYear: 500,
+       
         rentalAmount: 2000,
         description: "Description for Property 1"
       },
@@ -46,7 +46,7 @@ function App() {
         price: 150000,
 
         additionalImages: [p4, p5],
-        returnPerTokenPerYear: 600,
+       
         rentalAmount: 2500,
         description: "Description for Property 2"
       },
@@ -56,7 +56,7 @@ function App() {
         price: 200000,
 
         additionalImages: [p6],
-        returnPerTokenPerYear: 800,
+      
         rentalAmount: 3000,
         description: "Description for Property 3"
       }

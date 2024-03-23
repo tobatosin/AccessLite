@@ -48,7 +48,6 @@ function PropertyPage() {
                         name: "Property 2",
                         price: 150000,
                         image: PropertyImage2,
-                        returnPerTokenPerYear: 600,
                         rentalAmount: 2500
                     },
                     {
@@ -56,7 +55,6 @@ function PropertyPage() {
                         name: "Property 3",
                         price: 200000,
                         image: PropertyImage3,
-                        returnPerTokenPerYear: 800,
                         rentalAmount: 3000
                     }
                     // Add more properties as needed
