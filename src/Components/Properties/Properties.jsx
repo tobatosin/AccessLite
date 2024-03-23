@@ -8,10 +8,11 @@ import Apartment from "./cards/apartment";
 import Outlets from "./cards/outlet";
 import Office from "./cards/offices";
 import Practice from "./cards/practice";
-import Real from "./cards/real";
+import Practice2 from "./cards/Practice2";
+// import Real from "./cards/real";
 
 import realEstateAbi from '../../contracts/realEstateAbi.json';
-import NFTViewer from "./cards/viewer";
+// import NFTViewer from "./cards/viewer";
 
 function PropertyPage() {
   const [web3, setWeb3] = useState(null);
@@ -156,8 +157,9 @@ function PropertyPage() {
       <Office />
       <Outlets />
       <Practice />
-      <Real />
-      <NFTViewer />
+      <Practice2 />
+      {/* <Real />  */}
+      {/* <NFTViewer /> */}
     </div>
 
   );
