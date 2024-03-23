@@ -7,14 +7,11 @@ import PropertyImage3 from "../../img/property-3.jpg";
 import Apartment from "./cards/apartment";
 import Outlets from "./cards/outlet";
 import Office from "./cards/offices";
-<<<<<<< HEAD
 // import Practice from "./cards/practice";
 // import Practice2 from "./cards/Practice2";
 
-=======
-import Practice from "./cards/practice";
-import Real from "./cards/real";
->>>>>>> 09d4cdd1694a34032166e642c05922654fbb3aad
+// import Practice from "./cards/practice";
+// import Real from "./cards/real";
 
 import realEstateAbi from '../../contracts/realEstateAbi.json';
 
@@ -93,14 +90,12 @@ function PropertyPage() {
       <Apartment />
       <Office />
       <Outlets />
-<<<<<<< HEAD
+
       {/* <Practice /> */}
       {/* <Practice2 /> */}
-     
-=======
-      <Practice />
+      {/* <Practice /> */}
 
->>>>>>> 09d4cdd1694a34032166e642c05922654fbb3aad
+
     </div>
 
   );

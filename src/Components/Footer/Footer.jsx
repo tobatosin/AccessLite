@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom';
 import { FaArrowLeft } from "react-icons/fa6";
+import p1 from "../../img/property-1.jpg"
+import p2 from "../../img/property-2.jpg"
+import p3 from "../../img/property-3.jpg"
+import p4 from "../../img/property-4.jpg"
 
 function Footer() {
     return(
@@ -51,28 +55,28 @@ function Footer() {
                   <div className="col-4">
                     <img
                       className="img-fluid rounded bg-light p-1"
-                      src="./src/img/property-1.jpg"
+                      src={p1}
                       alt=""
                     />
                   </div>
                   <div className="col-4">
                     <img
                       className="img-fluid rounded bg-light p-1"
-                      src="./src/img/property-2.jpg"
+                      src={p2}
                       alt=""
                     />
                   </div>
                   <div className="col-4">
                     <img
                       className="img-fluid rounded bg-light p-1"
-                      src="./src/img/property-3.jpg"
+                      src={p3}
                       alt=""
                     />
                   </div>
                   <div className="col-4">
                     <img
                       className="img-fluid rounded bg-light p-1"
-                      src="./src/img/property-4.jpg"
+                      src={p4}
                       alt=""
                     />
                   </div>
