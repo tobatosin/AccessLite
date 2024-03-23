@@ -6,6 +6,7 @@ import Web3 from "web3";
 import PropertyImage1 from "../../../img/property-1.jpg";
 import PropertyImage2 from "../../../img/property-2.jpg";
 import PropertyImage3 from "../../../img/property-3.jpg";
+import realEstateAbi from '../../../contracts/realEstateAbi.json';
 
 function Outlets() {
     const [web3, setWeb3] = useState(null);
@@ -71,41 +72,30 @@ function Outlets() {
     }, []);
 
 
-    async function buyTokens(propertyId) {
-        try {
-            // Check if Web3 is connected
-            if (!connected) {
-                // Prompt the user to connect their wallet using MetaMask
-                if (window.ethereum) {
-                    await window.ethereum.enable();
-                    setConnected(true);
-                } else {
-                    throw new Error("Please install MetaMask or use a dapp browser.");
-                }
+    const buyTokens = async (propertyIndex) => {
+        // Connect to the Ethereum blockchain
+        if (window.ethereum) {
+            window.web3 = new Web3(window.ethereum);
+            await window.ethereum.enable();
+            const web3 = window.web3;
+
+            // Instantiate your smart contract
+            const contractAddress = "0x5299edAe22d7D0E8590724e18424545D320468A2";
+            const contract = new web3.eth.Contract(realEstateAbi, contractAddress);
+
+            // Call the buyTokens function
+            try {
+                const accounts = await web3.eth.getAccounts();
+                await contract.methods.buyTokens().send({ value: "10000000000", from: accounts[0] });
+                alert("Tokens bought successfully for property " + propertyIndex);
+            } catch (error) {
+                console.error("Error buying tokens:", error);
+                alert("Failed to buy tokens for property " + propertyIndex);
             }
-
-            // Ensure token amount is greater than 0
-            if (tokenAmount <= 0) {
-                throw new Error("Please enter a valid token amount.");
-            }
-
-            // Calculate total cost
-            const totalPrice = tokenAmount * 10; // Assuming each token costs $10
-
-            // Get account address
-            const accounts = await web3.eth.getAccounts();
-            const account = accounts[0];
-
-            // Send transaction to buy tokens
-            const transaction = await token.methods.transfer(account, tokenAmount).send({ from: account, value: totalPrice });
-
-            console.log("Transaction successful:", transaction);
-
-
-        } catch (error) {
-            console.error("Error buying tokens:", error);
+        } else {
+            alert("Please install MetaMask to use this feature.");
         }
-    }
+    };
 
 
     return (
