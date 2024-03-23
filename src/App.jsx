@@ -62,8 +62,6 @@ function App() {
       }
 
       // { id: 1, name: "Property 1", price: 100000, description: "Description 1", additionalImage: [p1, p2] },
-      // { id: 2, name: "Property 2", price: 150000, description: "Description 2", additionalImage: [p1, p2] },
-      // { id: 3, name: "Property 3", price: 200000, description: "Description 3", additionalImage: [p1, p2] }
     ];
     setProperties(fetchedProperties);
   }, []);
@@ -92,9 +90,6 @@ function App() {
           <Route path="/properties" element={<Properties state={state} />} />
           <Route path="/About" element={<About state={state} />} />
           <Route path="/Services" element={<Services state={state} />} />
-
-
-
           <Route path="/my_properties" element={<My_Properties state={state} />} />
 
           <Route path="/properties/:id" element={<PropertyDetails properties={propertiesData} />
