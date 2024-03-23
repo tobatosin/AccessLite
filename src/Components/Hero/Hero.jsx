@@ -50,7 +50,7 @@ function Hero({ state }) {
             <div className="owl-carousel-item">
               <img
                 className="img-fluid"
-                src="./src/img/p18.png"
+                src="./src/img/property-4.jpg"
                 alt=""
               />
             </div>
@@ -65,7 +65,7 @@ function Hero({ state }) {
           <div class="row g-5 align-items-center ">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
               <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                <img class="img-fluid w-100" src="./src/img/Img-Apart-1/p6.png" />
+                <img class="img-fluid w-100" src="./src/img/property-3.jpg" />
               </div>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
